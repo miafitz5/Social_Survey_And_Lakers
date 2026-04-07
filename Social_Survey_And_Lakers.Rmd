@@ -10,6 +10,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning=TRUE, message=TRUE)
 library(tidyverse)
+library(lubridate)
 library(knitr)
 library(forcats)
 
@@ -57,10 +58,43 @@ gss2 %>%
 ^[Question 2 complete]
 
 
-### 3 
+### Staus Reordered by Year
 
 
 ```{r}
+gss3 <- gss2 %>%
+  group_by(year, marital) %>%
+  arrange(desc(year), desc(prop)) %>%
+  ungroup()
+
+gss3 %>%
+  kable()
+
+```
+
+
+^[Question 3 complete]
+
+
+### Proportion Versus Year
+
+
+```{r}
+ggplot(gss3, aes(x = year, y = prop, color = marital)) + 
+  geom_point() +
+  geom_line()
+
+```
+
+
+^[Question 4 complete]
+
+
+### 5
+
+
+```{r}
+
 
 
 ```

@@ -94,8 +94,46 @@ ggplot(gss3, aes(x = year, y = prop, color = marital)) +
 
 
 ```{r}
-
-
+lakers %>%
+  mutate(as.Date(date)) ### wtf
 
 ```
 
+
+^[Question 5 complete]
+
+
+### Subset of Dataset Including Parsed Dates
+
+
+```{r}
+lakers2 <- lakers %>%
+  mutate(date2 = as.character(date)) %>%
+  mutate(date2 = ymd(date2)) 
+
+lakers2 %>%
+  select(date, date2, team, etype, time, points) %>%
+  head(6) %>%
+  kable()
+
+```
+
+
+^[Question 6 complete]
+
+
+### Bar Graph of Games on Different Days of the Week
+
+
+```{r}
+lakers_bar <- lakers2 %>%
+  distinct(date2) %>%
+  mutate(day = wday(date2, label = TRUE, abbr = TRUE))
+
+ggplot(lakers_bar, aes(day)) +
+  geom_bar()
+
+```
+
+
+^[Question 7 complete]

@@ -15,5 +15,23 @@ library(forcats)
 
 ```
 
-### R Markdown
+
+### Combining Levels
+
+
+```{r}
+gss1 <- gss_cat %>%
+  mutate(marital = fct_recode(marital, 
+"Pre-Marriage" = "Never married",
+"Marriage" = "Married",
+"Marriage" = "Separated",
+"Post-Marriage" = "Divorced",
+"Post-Marriage" = "Widowed",
+"Missing" = "No answer"))
+
+gss1 %>%
+  count(marital) %>%
+  kable()
+
+```
 

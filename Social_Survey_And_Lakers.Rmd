@@ -37,3 +37,18 @@ gss1 %>%
 
 
 ^[Question 1 complete]
+
+
+### Proportion of Responses in Each Year
+
+
+```{r}
+gss1 %>%
+  count(year, marital) %>%
+  group_by(year) %>%
+  mutate(prop = n/sum(n))
+
+```
+
+
+^[Question 2 complete]

@@ -122,7 +122,7 @@ lakers2 %>%
 ^[Question 6 complete]
 
 
-### Bar Graph of Games on Different Days of the Week
+### Games Played on Different Days of the Week
 
 
 ```{r}

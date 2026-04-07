@@ -1,0 +1,19 @@
+---
+title: "Social_Survey_And_Lakers"
+author: "Mia Fitzgerald"
+date: "4/7/2026"
+output:
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=TRUE, message=TRUE)
+library(tidyverse)
+library(knitr)
+library(forcats)
+
+```
+
+### R Markdown
+

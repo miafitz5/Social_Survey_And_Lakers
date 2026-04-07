@@ -43,12 +43,25 @@ gss1 %>%
 
 
 ```{r}
-gss1 %>%
+gss2 <- gss1 %>%
   count(year, marital) %>%
   group_by(year) %>%
   mutate(prop = n/sum(n))
+
+gss2 %>%
+  kable()
 
 ```
 
 
 ^[Question 2 complete]
+
+
+### 3 
+
+
+```{r}
+
+
+```
+

@@ -90,12 +90,15 @@ ggplot(gss3, aes(x = year, y = prop, color = marital)) +
 ^[Question 4 complete]
 
 
-### 5
+### Integer to Date Error
 
 
 ```{r}
 lakers %>%
-  mutate(as.Date(date)) ### wtf
+  mutate(new_date = make_date(date)) %>%
+  select(date, new_date, time, player, result, etype, points) %>%
+  head(n=6) %>%
+  kable()
 
 ```
 

@@ -127,7 +127,7 @@ lakers2 %>%
 ```
 
 
-I works better because it uses as.character() to turn the number into a string, so then I can use the ymd() function from the lubridate package to parse the date correctly. This creates a new date2 column containing actual Date objects. The code then selects the relevant game details and displays the first six rows in a clean table using kable(). 
+I think it works better because it uses as.character() to turn the number into a string, so then I can use the ymd() function from the lubridate package to parse the date correctly. This creates a new column containing actual date objects. Then I select the relevant game details and display the first six rows in a clean table using kable(). 
 ^[Question 6 complete]
 
 
@@ -145,4 +145,5 @@ ggplot(lakers_bar, aes(day)) +
 ```
 
 
+First, distinct() filters the dataset to keep only unique game dates. The mutate step then uses the wday() function to extract the day of the week from those dates, formatting them as labeled, abbreviated names. Finally, ggplot creates a bar chart that counts these instances, providing a visual summary of which days of the week were the busiest for the team.
 ^[Question 7 complete]

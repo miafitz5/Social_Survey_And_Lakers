@@ -107,6 +107,7 @@ lakers %>%
 ```
 
 
+Because the date column in the lakers dataset is stored as an integer, so make_date() mistakenly tries to read that entire number as a year, resulting in invalid values. After, I select specific columns and display the first six rows in a formatted table.
 ^[Question 5 complete]
 
 
@@ -126,6 +127,7 @@ lakers2 %>%
 ```
 
 
+I works better because it uses as.character() to turn the number into a string, so then I can use the ymd() function from the lubridate package to parse the date correctly. This creates a new date2 column containing actual Date objects. The code then selects the relevant game details and displays the first six rows in a clean table using kable(). 
 ^[Question 6 complete]
 
 

@@ -90,6 +90,7 @@ ggplot(gss3, aes(x = year, y = prop, color = marital)) +
 ```
 
 
+Using the gss3 dataset, I created a line graph with data points to visualize how marital trends changed over time. The plot maps year to the x-axis and proportion to the y-axis, with each marital status represented by a unique color. 
 ^[Question 4 complete]
 
 

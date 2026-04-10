@@ -56,6 +56,7 @@ gss2 %>%
 ```
 
 
+First, it counts how many people fall into each marital category for every year. Then, it groups the data by year so that it can calculate the portion of that specific year's total. The final result is displayed as a formatted table.
 ^[Question 2 complete]
 
 

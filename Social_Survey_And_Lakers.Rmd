@@ -37,6 +37,7 @@ gss1 %>%
 ```
 
 
+I consolidated the specific marital statuses in the gss_cat dataset into four categories using fct_recode(). By grouping "Never married" as Pre-Marriage, "Married" and "Separated" as Marriage, and "Divorced" and "Widowed" as Post-Marriage. Finally, it generates a count of these new groups and displays them in a table.
 ^[Question 1 complete]
 
 

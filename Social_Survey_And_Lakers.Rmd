@@ -60,7 +60,7 @@ First, it counts how many people fall into each marital category for every year.
 ^[Question 2 complete]
 
 
-### Staus Reordered by Year
+### Status Reordered by Year
 
 
 ```{r}
@@ -75,6 +75,7 @@ gss3 %>%
 ```
 
 
+I group the data so I can logically rank the information. The arrange() function puts the most recent years at the top and sorts status from the highest to the lowest. Making sure that for every year, you immediately see the most common marital status first. Finally, it removes the grouping and displays the results in a table.
 ^[Question 3 complete]
 
 
